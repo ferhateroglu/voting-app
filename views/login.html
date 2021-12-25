@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .divider:after,
+        .divider:before {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #eee;
+    }
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    
+    <!--nav-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-lg">
+        <div class="container-fluid mx-5">
+            <a class="navbar-brand"> <img src="./images/blockchain-logo.png" alt="" width="100" height="100"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse p-4" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item mx-2">
+                      <a class="nav-link active text-primary" style="font-size: 30px;" aria-current="page" href="#">Ana Sayfa</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                      <a class="nav-link active text-primary" style="font-size: 30px;" aria-current="page" href="#">Anketler</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                      <a class="nav-link active text-primary" style="font-size: 30px;" aria-current="page" href="#">Anket Ekle</a>
+                  </li>
+              </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-primary" style="font-size: 24px;" type="submit">Giriş</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <!--login-->
+    <section class="vh-100">
+        <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+                alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form>
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="form3Example3" class="form-control form-control-lg"
+                               placeholder="Email adresinizi giriniz" />
+                        <label class="form-label" for="form3Example3">Email adresi</label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <input type="password" id="form3Example4" class="form-control form-control-lg"
+                               placeholder="Şifrenizi giriniz" />
+                        <label class="form-label" for="form3Example4">Şifre</label>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Checkbox -->
+                        <div class="form-check mb-0">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                            <label class="form-check-label" for="form2Example3">
+                                Beni Hatırla
+                            </label>
+                        </div>
+                        <a href="#!" class="text-body">Şifreni mi unuttun?</a>
+                    </div>
+
+
+
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="button" class="btn btn-primary btn-lg"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                            Giriş
+                        </button>
+                        <p class="small fw-bold mt-2 pt-1 mb-0">
+                            Hesabın yok mu? <a href="#!"
+                                               class="link-danger">Kayıt ol</a>
+                        </p>
+                    </div>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0">Ya da</p>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <p class="lead fw-bold mb-0 me-3">şununla giriş yapın: </p>
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
