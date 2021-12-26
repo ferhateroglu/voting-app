@@ -10,85 +10,61 @@
 <body>
   
     <%- include('./inc/nav') %> 
-    <section class="vh-100 bg-secondary" >
+
+    <form action="" method="post">
+      <section class="vh-100 bg-secondary" >
         <div class="container h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-xl-9">
-      
-              <h1 class="text-white mb-4">Kayıt Ol</h1>
-      
+            <div class="col-xl-9">      
+              <h1 class="text-white mb-4">Kayıt Ol</h1>      
               <div class="card" style="border-radius: 15px;">
-                <div class="card-body">
-      
+                <div class="card-body">    
                   <div class="row align-items-center pt-4 pb-3">
-                    <div class="col-md-3 ps-5">
-      
-                      <h6 class="mb-0">İsim</h6>
-      
+                    <div class="col-md-3 ps-5">    
+                      <h6 class="mb-0">İsim</h6>     
                     </div>
-                    <div class="col-md-9 pe-5">
-      
-                      <input type="text" class="form-control form-control-lg" placeholder="İsminiz" />
-      
+                    <div class="col-md-9 pe-5">     
+                      <input name="username" type="text" class="form-control form-control-lg" placeholder="İsminiz" />
                     </div>
-                  </div>
-      
-                  <hr class="mx-n3">
-      
+                  </div>     
+                  <hr class="mx-n3">      
                   <div class="row align-items-center py-3">
-                    <div class="col-md-3 ps-5">
-      
-                      <h6 class="mb-0">E-posta Adresi</h6>
-      
+                    <div class="col-md-3 ps-5">      
+                      <h6 class="mb-0">E-posta Adresi</h6>    
                     </div>
-                    <div class="col-md-9 pe-5">
-      
-                      <input type="email" class="form-control form-control-lg" placeholder="ornek@example.com" />
-      
+                    <div class="col-md-9 pe-5">    
+                      <input name="email" type="email" class="form-control form-control-lg" placeholder="ornek@example.com" />      
                     </div>
                   </div>
-      
-                  <hr class="mx-n3">
-
-                  <div class="row align-items-center pt-4 pb-3">
-                    <div class="col-md-3 ps-5">
-      
-                      <h6 class="mb-0">Şifre</h6>
-      
-                    </div>
-                    <div class="col-md-9 pe-5">
-      
-                      <input type="password" class="form-control form-control-lg" placeholder="Şifreniz" />
-      
-                    </div>
-                  </div>
-      
                   <hr class="mx-n3">
                   <div class="row align-items-center pt-4 pb-3">
-                    <div class="col-md-3 ps-5">
-      
+                    <div class="col-md-3 ps-5">      
+                      <h6 class="mb-0">Şifre</h6>     
+                    </div>
+                    <div class="col-md-9 pe-5">   
+                      <input name="password" type="password" class="form-control form-control-lg" placeholder="Şifreniz" />     
+                    </div>
+                  </div>    
+                  <hr class="mx-n3">
+                  <div class="row align-items-center pt-4 pb-3">
+                    <div class="col-md-3 ps-5"> 
                       <h6 class="mb-0">Tekrar Şifre</h6>
-      
                     </div>
                     <div class="col-md-9 pe-5">
-      
-                      <input type="password" class="form-control form-control-lg" placeholder="Şifreniz" />
-      
+                      <input name="passwordagain" type="password" class="form-control form-control-lg" placeholder="Şifreniz" />
                     </div>
-                  </div>
-      
+                  </div>  
                   <hr class="mx-n3">
-
                   <div class="px-5 py-4">
                     <button type="submit" class="btn btn-primary btn-lg">Kaydı Tamamla</button>
-                  </div>
-      
+                  </div>     
                 </div>
-              </div>
-      
+              </div>     
             </div>
           </div>
         </div>
       </section>
+    </form>
+
 </body>
 </html>

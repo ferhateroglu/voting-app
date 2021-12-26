@@ -10,7 +10,7 @@ mongoose.connect(dbURL, {useNewUrlParser: true})
 .then((result) => app.listen(3000)).catch((error)=>console.log(error));
 
 const app = express();
-
+app.use(express.urlencoded({extended: true}));
 app.use(express.static('public')) //static ile konuma dışardan erişim izni sağlanır(genelde klasör adı public yapılır ama zorunlu değil)
 app.set('view engine', 'ejs'); //view engine change
 app.use('/votes',voteRoutes);
