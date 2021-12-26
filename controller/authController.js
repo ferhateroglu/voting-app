@@ -6,9 +6,15 @@ const login_get =  (req,res) =>{
 
 const login_post = async function(req,res){
     const {email, password} = req.body;
-    const user = await userModel.loginUser(email,password);
+    try{
+        const user = await userModel.loginUser(email,password);
+        console.log(user);
+        res.redirect('/votes');
+    }catch(e){
+        console.log(e);
+        res.redirect('login');
+    }
 
-    //res.redirect('/votes');
 }
 
 
