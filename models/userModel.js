@@ -11,7 +11,8 @@ const userDbSimulation = {
 const saveUser = async function(userObject){
     const salt = await bcrypt.genSalt();
     userObject.password = await bcrypt.hash(userObject.password,salt);
-    console.log(userObject.password);
+    //register dan gelen kullanıcı
+    console.log(userObject);
     /*
      * buraya veri tabanına user ekleme işlemleri gelecek
      * 
