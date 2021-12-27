@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
 
+
 //veti tabanı simülasyonu
 const userDbSimulation = {
     username: 'ferhat',
@@ -11,13 +12,14 @@ const userDbSimulation = {
 const saveUser = async function(userObject){
     const salt = await bcrypt.genSalt();
     userObject.password = await bcrypt.hash(userObject.password,salt);
-    //register dan gelen kullanıcı
+    //register page dan gelen kullanıcı
     console.log(userObject);
     /*
      * buraya veri tabanına user ekleme işlemleri gelecek
      * 
      */
 }
+
 
 
 //login
