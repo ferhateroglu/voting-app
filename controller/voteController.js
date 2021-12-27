@@ -1,6 +1,7 @@
 
 const vote_index = (req,res) => {
-    res.render('surveys');
+
+    res.render('surveys',{});
 };
 
 const vote_id = (req,res) => {
