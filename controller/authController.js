@@ -7,20 +7,20 @@ const createToken = (email) =>{
     return jwt.sign({email},'gizli kelime',{expiresIn: maxAge});
 }
 
-const login_get =  (req,res) =>{
+const login_get = (req,res) =>{
     res.render('login');
 }
 
-const login_post = async function(req,res){
+const login_post =  function(req,res){
     const {email, password} = req.body;
     try{
-        const user = await userModel.loginUser(email,password);
+        const userMail =  userModel.loginUser(email,password);
         const token = createToken(email);
         res.cookie('jwt',token,{httpOnly: true,maxAge: maxAge*1000});
         res.redirect('/votes');
     }catch(e){
         console.log(e);
-        res.redirect('login');
+        res.redirect('/login');
     }
 }
 

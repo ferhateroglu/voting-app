@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 //veti tabanı simülasyonu
 const userDbSimulation = {
     username: 'ferhat',
-    email: 'ferhat@gmail.com',
+    email: 'ferhatt@gmail.com',
     password: '$2b$10$uD6wCKH5gOE5BxUH.bDeOe3QtC0KSDp8XO2qR24EhGeo/LJuckAOi'
 }
 
@@ -15,6 +15,7 @@ const requireAuth = (req,res,next) =>{
                 console.log(err);
                 res.redirect('/login');
             }else{
+                res.locals.user = decodedToken;
                 next();
             }
         })
@@ -31,9 +32,6 @@ const checkUser = (req,res,next) => {
                 console.log(err)
                 res.locals.user = null;
             }else{
-                //veri tabanından tokenin çekilmesi
-                let user = userDbSimulation;
-                res.locals.user = user;
                 next();
             }
         });
