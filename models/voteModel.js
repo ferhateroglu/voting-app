@@ -13,7 +13,16 @@ connection.connect((err) =>{
     if(err) throw err;
 });
 
-//son bloğun getirilmesi
-const getLastBlock = () =>{
-    //return hash
+//oy Kaydet
+const saveVote = (secmen) =>{
+    //secmen.mail, secmen.tercih
+}
+
+// oy sonucu
+const voteResult = () =>{
+    return 'sonuçlar';
+}
+
+const chainData = () =>{
+    return 'data';
 }

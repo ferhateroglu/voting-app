@@ -22,7 +22,6 @@ app.use(express.static('public')) //static ile konuma dışardan erişim izni sa
 app.use('/login',authRoutes);
 app.use('/register',registerRouter);
 app.use('/votes',requireAuth,voteRoutes);
-//app.use('logout',outRouter);
 
 app.get('*',checkUser);
 app.get('/',(req,res) =>{

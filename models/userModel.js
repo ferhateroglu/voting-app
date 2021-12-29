@@ -38,7 +38,6 @@ const saveUser = async function(userObject){
         };
         // call the service
         client.PasswordHasher(args, function (err, res) {
-            a
 
             if (err){
                 throw err
