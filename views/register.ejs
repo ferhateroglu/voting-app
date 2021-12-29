@@ -12,19 +12,19 @@
     <%- include('./inc/nav') %> 
 
     <form action="" method="post">
-      <section class="vh-100 bg-secondary" >
+      <section class="vh-100" >
         <div class="container h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-9">      
               <h1 class="text-white mb-4">Kayıt Ol</h1>      
-              <div class="card" style="border-radius: 15px;">
+              <div class="card bg-light w-75 mx-auto mb-5" style="border-radius: 15px;">
                 <div class="card-body">    
                   <div class="row align-items-center pt-4 pb-3">
                     <div class="col-md-3 ps-5">    
                       <h6 class="mb-0">İsim</h6>     
                     </div>
                     <div class="col-md-9 pe-5">     
-                      <input name="username" type="text" class="form-control form-control-lg" placeholder="İsminiz" />
+                      <input name="username" type="text" class="form-control form-control-lg"  />
                     </div>
                   </div>     
                   <hr class="mx-n3">      
@@ -34,7 +34,7 @@
                       <h6 class="mb-0">Soyisim</h6>     
                     </div>
                     <div class="col-md-9 pe-5">     
-                      <input name="lastname" type="text" class="form-control form-control-lg" placeholder="Soyisminiz" />
+                      <input name="lastname" type="text" class="form-control form-control-lg" />
                     </div>
                   </div>     
                   <hr class="mx-n3">
@@ -44,7 +44,7 @@
                       <h6 class="mb-0">E-posta Adresi</h6>    
                     </div>
                     <div class="col-md-9 pe-5">    
-                      <input name="email" type="email" class="form-control form-control-lg" placeholder="ornek@example.com" />      
+                      <input name="email" type="email" class="form-control form-control-lg"  />      
                     </div>
                   </div>
                   <hr class="mx-n3">
@@ -53,7 +53,7 @@
                       <h6 class="mb-0">Şifre</h6>     
                     </div>
                     <div class="col-md-9 pe-5">   
-                      <input name="password" type="password" class="form-control form-control-lg" placeholder="Şifreniz" />     
+                      <input name="password" type="password" class="form-control form-control-lg"  />     
                     </div>
                   </div>    
                   <hr class="mx-n3">
@@ -63,9 +63,9 @@
                       <h6 class="mb-0">Cinsiyet</h6>     
                     </div>
                     <div class="col-md-9 pe-5">     
-                      <input type="radio" id="KADIN" name="gender" value="2">  
+                      <input class="custom-input" type="radio" id="KADIN" name="gender" value="2">  
                       <label for="KADIN">KADIN</label>
-                      <input type="radio" id="ERKEK" name="gender" value="1">
+                      <input class="custom-input" type="radio" id="ERKEK" name="gender" value="1">
                       <label for="ERKEK">ERKEK</label>
                     </div>
                   </div>     
@@ -76,7 +76,7 @@
                       <h6 class="mb-0">İlçe</h6>     
                     </div>
                     <div class="col-md-9 pe-5">     
-                      <input name="ilce" type="text" class="form-control form-control-lg" placeholder="Yaşadığınız ilçe" />
+                      <input name="ilce" type="text" class="form-control form-control-lg"  />
                     </div>
                   </div>     
                   <hr class="mx-n3">  
@@ -86,7 +86,7 @@
                       <h6 class="mb-0">Doğum Tarihi</h6>     
                     </div>
                     <div class="col-md-9 pe-5">     
-                      <input name="birth" type="date" class="form-control form-control-lg" placeholder="doğum tarihi" />
+                      <input name="birth" type="date" class="form-control form-control-lg"  />
                     </div>
                   </div>     
                   <hr class="mx-n3">  

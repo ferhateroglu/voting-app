@@ -12,3 +12,8 @@ const connection =  mysql.createConnection({
 connection.connect((err) =>{
     if(err) throw err;
 });
+
+//son bloğun getirilmesi
+const getLastBlock = () =>{
+    //return hash
+}

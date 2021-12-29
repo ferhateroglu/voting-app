@@ -31,10 +31,16 @@ app.get('/',(req,res) =>{
 app.get('/about', (req,res) =>{
     res.render('about');
 });
-app.get('logout', (req,res) =>{
+app.get('/logout', (req,res) =>{
     res.cookie('jwt','',{maxAge:1});
     res.redirect('login');
 });
+/*
+app.get('/logout', (req,res) =>{
+    res.send
+    /*res.cookie('jwt','',{maxAge:1});
+    res.redirect('login');
+});*/
 
 
 

@@ -25,7 +25,6 @@ const login_post =  function(req,res){
 }
 
 
-
 module.exports = {
     login_get,
     login_post

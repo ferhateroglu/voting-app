@@ -18,8 +18,11 @@ connection.connect((err) =>{
 
 //save user
 const saveUser = async function(userObject){
-    const salt = await bcrypt.genSalt();
-    userObject.password = await bcrypt.hash(userObject.password,salt);
+
+
+    //const salt = await bcrypt.genSalt();
+    //userObject.password = await bcrypt.hash(userObject.password,salt);
+    
     //register page dan gelen kullanıcı
     console.log(userObject);
 
@@ -54,6 +57,7 @@ const saveUser = async function(userObject){
 //login
 
 const loginUser =  function(email,password){
+    var id ;
     connection.query(`Select * from tbl_kullanıcılar where mail='${email}'`,(err, res) => {
         if(err) throw err;
         if(!res.length){
@@ -68,6 +72,7 @@ const loginUser =  function(email,password){
             }
         })
     });
+
 }
 
 
