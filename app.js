@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const registerRouter = require('./routes/registerRoutes');
 const outRouter = require('./routes/outRouter');
 const {requireAuth , checkUser} = require('./middlewares/authMiddleware');
+const { render } = require('express/lib/response');
 
 
 
@@ -26,6 +27,9 @@ app.use('/votes',requireAuth,voteRoutes);
 app.get('*',checkUser);
 app.get('/',(req,res) =>{
     res.render('home');
+});
+app.get('/about', (req,res) =>{
+    res.render('about');
 });
 app.get('logout', (req,res) =>{
     res.cookie('jwt','',{maxAge:1});

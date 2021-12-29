@@ -14,7 +14,7 @@ const login_get = (req,res) =>{
 const login_post =  function(req,res){
     const {email, password} = req.body;
     try{
-        const userMail =  userModel.loginUser(email,password);
+        userModel.loginUser(email,password);
         const token = createToken(email);
         res.cookie('jwt',token,{httpOnly: true,maxAge: maxAge*1000});
         res.redirect('/votes');
