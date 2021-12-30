@@ -1,6 +1,5 @@
 const userModel = require('../models/userModel');
 const jwt = require('jsonwebtoken');
-const res = require('express/lib/response');
 const maxAge = 60*60*24;
 
 const createToken = (email) =>{

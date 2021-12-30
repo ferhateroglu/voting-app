@@ -77,11 +77,6 @@ const saveUser = async function(userObject){
         });
     });
 
-    //const salt = await bcrypt.genSalt();
-    //userObject.password = await bcrypt.hash(userObject.password,salt);
-    
-    //register page dan gelen kullanıcı
-
 };
 
 //login
@@ -90,17 +85,52 @@ const loginUser =  function(email,password){
     var id ;
     connection.query(`Select * from tbl_kullanıcılar where mail='${email}'`,(err, res) => {
         if(err) throw err;
-        if(!res.length){
-            throw Error('username or password in correct')
+        if(!res.length)
+        {
+            throw Error('username or password in correct');
         }
-        bcrypt.compare(password, res[0].password_token, (bErr, bResult)=>{
+            var hashedPassword;
+            soap.createClient(url, function (err, client) {   
+                if (err){
+                  throw err;
+                }
+                /* 
+                * Parameters of the service call: they need to be called as specified
+                * in the WSDL file
+                */
+                var args = {
+                  plainText: password
+                };
+                // call the service
+                client.PasswordHasher(args, function (err, res) {
+        
+                    if (err){
+                        throw err
+                    };
+                    // print the service returned result
+                    hashedPassword = res.result;
+                    connection.query(`Select * from tbl_kullanıcılar where password_token='${hashedPassword}'`,(err, res) => {
+                        if(err) throw err;
+                        if(!res.length)
+                        {
+                            throw Error('username or password in correct');
+                        }
+                    });
+
+
+            });
+        });
+        
+    
+        
+        /*bcrypt.compare(password, res[0].password_token, (bErr, bResult)=>{
             if(bErr){
                 throw Error('username or password in correct')
             }
             if(bResult){//password match
                 return email
             }
-        })
+        })*/
     });
 
 }
