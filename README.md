@@ -11,14 +11,10 @@ Blockchain based voting application. User information and votes are kept in bloc
 
 ## Installation
 
-Gerekli paketleri yüklemek için npm yi kullanın.
+install with npm
 
 ```bash
-npm install
+npm init
 npm start
 ```
 
-## Usage
-
-Program localhost:3000 de yayında olacak.
-Tarayıcınızdan kullanmaya başlayabilirsiniz.
