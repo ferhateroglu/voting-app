@@ -19,7 +19,7 @@ async function splitter_function(args) {
   //   path: '/sifrele/sha256/'+args.plainText,
   //   method: 'GET'
   // }
-  let url = 'http://127.0.0.1:5000//sifrele/sha256/'+args.plainText;
+  let url = 'http://10.138.136.161:5000//sifrele/sha256/'+args.plainText;
   // const req = https.request(options, res => {
   //   console.log(`statusCode: ${res.statusCode}`)
   

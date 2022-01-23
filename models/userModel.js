@@ -22,9 +22,7 @@ connection.connect((err) =>{
 const saveUser = async function(userObject){
 
     var hashedPassword;
-    console.log("Save User 1");
     soap.createClient(url, function (err, client) {
-    console.log("Save User 2");
 
         if (err){
           throw err;
@@ -51,11 +49,10 @@ const saveUser = async function(userObject){
 
             var _ilce_id;
             var ilce_adi =userObject.ilce; // kullanıcın kayıt olurken sectigi ilce adı olacak burda
-
             connection.query('select ilce_adına_gore_ilce_id_dondur(?) as ilce_id',ilce_adi, (err, res) => {
             if(err) throw err;
             console.log('ilce ID:', res[0].ilce_id);
-            _ilce_id=res.ilce_id; // donen deger _ilce_id ye atanacak
+            userObject.ilce=res[0].ilce_id; // donen deger _ilce_id ye atanacak
         });
 
         var girdi = { 
