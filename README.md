@@ -1,4 +1,4 @@
-# Oyla
+# Votin App
 
 Blockchain based voting application. User information and votes are kept in blocks.
 
@@ -9,17 +9,16 @@ Blockchain based voting application. User information and votes are kept in bloc
 - REST and SOAP web services are used.
 - MySQL database is used.
 
-## Kurulum
+## Installation
 
 Gerekli paketleri yüklemek için npm yi kullanın.
 
 ```bash
 npm install
-node appSoa.js
-nodemon app.js
+npm start
 ```
 
-## Kullanım
+## Usage
 
 Program localhost:3000 de yayında olacak.
 Tarayıcınızdan kullanmaya başlayabilirsiniz.
